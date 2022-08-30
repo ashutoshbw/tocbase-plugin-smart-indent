@@ -1,6 +1,6 @@
 # tocbase-plugin-smart-indent
 
-A [tocbase](https://github.com/ashutoshbw/tocbase) plugin for smartly adding indentation to ToC items. Here is before after photo:
+A [tocbase](https://github.com/ashutoshbw/tocbase) plugin for smartly adding indentation to ToC items. Here is a before after photo:
 
 ![A before after of tocbase smart indent plugin](./before-after.png)
 
