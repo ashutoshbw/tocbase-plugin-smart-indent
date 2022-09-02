@@ -1,19 +1,21 @@
 # tocbase-plugin-smart-indent
 
-A [tocbase](https://github.com/ashutoshbw/tocbase) plugin for smartly adding indentation to ToC items. Here is a before after photo:
+A [tocbase](https://github.com/ashutoshbw/tocbase) plugin for smartly adding indentation to numbered ToC items. Here is a before after photo:
 
 ![A before after of tocbase smart indent plugin](./before-after.png)
 
 Above the offset is zero. If you want to them go a little more inward or outward you can do that with the `offset` option.
 
+**Note**: This plugin only works if numbers are added by `tocbase` using the `tocNum` property. If you use `<ol>` or CSS to add numbers, it will not add indentation in those cases.
+
 ## Installing
 ### From CDN
 In your HTML page's `<head>`, include the following alongside `tocbase` library:
 ```html
-<script  src="https://unpkg.com/tocbase-plugin-smart-indent@1.0.0/dist/cdn.umd.min.js"></script>
+<script  src="https://unpkg.com/tocbase-plugin-smart-indent@2.0.0/dist/cdn.umd.min.js"></script>
 ```
 
-This will result in a `smartIndent` variable containing a function.
+This will result in a `smartIndent` variable containing the plugin function.
 
 ### Using node and bundler
 To install it run in your terminal:

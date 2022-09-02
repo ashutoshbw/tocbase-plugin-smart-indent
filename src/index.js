@@ -1,10 +1,10 @@
 export default ({offset = '0'} = {}) => ({
   name: "smart-indent",
   setup(bag) {
-    if (!bag.config.num) return bag;
+    if (!bag.config.tocNum) return bag;
 
     const t = bag.toc;
-    const subULs = bag.ulol.slice(1);
+    const subULs = bag.ulOl.slice(1);
 
 
     for (let i = 0; i < subULs.length; i++) {

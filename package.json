@@ -1,8 +1,8 @@
 {
   "type": "module",
   "name": "tocbase-plugin-smart-indent",
-  "version": "1.0.0",
-  "description": "A tocbase plugin for smartly adding indentation to ToC items.",
+  "version": "2.0.0",
+  "description": "A tocbase plugin for smartly adding indentation to numbered ToC items.",
   "repository": {
     "type": "git",
     "url": "https://github.com/ashutoshbw/tocbase-plugin-smart-indent.git"
