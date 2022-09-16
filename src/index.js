@@ -1,26 +1,27 @@
-export default ({offset = '0'} = {}) => ({
-  name: "smart-indent",
-  setup(bag) {
-    if (!bag.config.tocNum) return bag;
+import { createPlugin } from "tocbase";
 
-    const t = bag.toc;
-    const subULs = bag.ulOl.slice(1);
+export default createPlugin("smartIndent", (bag, resolveInput) => {
+  const ipOffset = resolveInput("offset", '0');
+  if (!bag.bTocNum) return null;
+  if (!bag.placeholderElt) document.body.append(bag.toc);
 
+  const t = bag.toc;
+  const subLists = bag.lists.slice(1);
 
-    for (let i = 0; i < subULs.length; i++) {
-      const span = bag.elt("span");
-      const parentLI = subULs[i].parentElement;
-      bag.$("a", parentLI).insertAdjacentElement("beforebegin", span);
+  for (let i = 0; i < subLists.length; i++) {
+    const span = bag.elt("span");
+    const parentLI = subLists[i].parentElement;
+    bag.$("a", parentLI).insertAdjacentElement("beforebegin", span);
 
-      const x2 = parentLI.getBoundingClientRect().x;
-      const x1 = span.getBoundingClientRect().x;
+    const x2 = parentLI.getBoundingClientRect().x;
+    const x1 = span.getBoundingClientRect().x;
 
-      span.remove();
+    span.remove();
 
-      subULs[i].style.paddingLeft = (x1 - x2) + "px";
-      subULs[i].style.marginLeft = offset;
-    }
-
-    return bag;
+    subLists[i].style.paddingLeft = (x1 - x2) + "px";
+    subLists[i].style.marginLeft = ipOffset;
   }
+
+  if (!bag.placeholderElt) document.body.lastChild.remove();
+  return null;
 });
