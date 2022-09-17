@@ -9,13 +9,13 @@ Above the offset is zero. If you want them to go a little more inward or outward
 **Note**: This plugin only works if ToC numbers are enabled by `tocbase` using the `bTocNum` property. Without `bTocNum` if you use `<ol>` or CSS to add numbers, it will not add indentation.
 
 ## Requirements
-`tocbase` version v8.3.5 or up.
+`tocbase` version v8.4.5 or up.
 
 ## Installing
 ### From CDN
 In your HTML page's `<head>`, include the following alongside `tocbase` library:
 ```html
-<script  src="https://unpkg.com/tocbase-plugin-smart-indent@3.0.0/dist/cdn.umd.min.js"></script>
+<script  src="https://unpkg.com/tocbase-plugin-smart-indent@3.0.1/dist/cdn.umd.min.js"></script>
 ```
 
 This will result in a `smartIndent` variable containing the plugin function.
