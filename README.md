@@ -17,7 +17,7 @@ Above the offset is zero. If you want them to go a little more inward(right) or 
 ### From CDN
 In your HTML page's `<head>`, include the following alongside `tocbase` library:
 ```html
-<script  src="https://unpkg.com/tocbase-plugin-smart-indent@3.0.2/dist/cdn.umd.min.js"></script>
+<script  src="https://unpkg.com/tocbase-plugin-smart-indent@3.0.3/dist/cdn.umd.min.js"></script>
 ```
 
 **Note**: It is recommend to use a fixed version(like above) instead of `latest` keyword, to avoid any troubles if breaking changes happen.
@@ -50,7 +50,7 @@ const toc = createToc({
 ```
 
 To move the items a little inward, let's pass an `offset`:
-```
+```js
 const toc = createToc({
   plugins: [
     smartIndent({ offset: "0.5rem" }),
